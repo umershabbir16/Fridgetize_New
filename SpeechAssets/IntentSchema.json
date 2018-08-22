@@ -1,0 +1,113 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "my fridge",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "MakeSomethingIntent",
+                    "slots": [
+                        {
+                            "name": "RecipeItem",
+                            "type": "AMAZON.Food"
+                        }
+                    ],
+                    "samples": [
+                        "I am making {RecipeItem}"
+                    ]
+                },
+                {
+                    "name": "CheckIngredientsForRecipeIntent",
+                    "slots": [
+                        {
+                            "name": "RecipeItem",
+                            "type": "AMAZON.Food"
+                        }
+                    ],
+                    "samples": [
+                        "if I can make {RecipeItem}"
+                    ]
+                },
+                {
+                    "name": "AddItemsIntent",
+                    "slots": [
+                        {
+                            "name": "Quantity",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "Measurement",
+                            "type": "UnitOfMeasure"
+                        },
+                        {
+                            "name": "RecipeItem",
+                            "type": "AMAZON.Food"
+                        }
+                    ],
+                    "samples": [
+                        "I bought {Quantity} {Measurement} {RecipeItem}",
+                        "I bought {Quantity} {Measurement} of {RecipeItem}",
+                        "{Quantity} {Measurement} {RecipeItem}",
+                        "{Quantity} {Measurement} of {RecipeItem}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "UnitOfMeasure",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "gallons"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "oz"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "gallon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pound"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "kilogram"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "kg"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
